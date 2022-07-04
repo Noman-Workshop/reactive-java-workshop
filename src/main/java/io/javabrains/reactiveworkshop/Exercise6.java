@@ -1,7 +1,5 @@
 package io.javabrains.reactiveworkshop;
 
-import reactor.core.publisher.Mono;
-
 import java.io.IOException;
 import java.time.Duration;
 import java.util.List;

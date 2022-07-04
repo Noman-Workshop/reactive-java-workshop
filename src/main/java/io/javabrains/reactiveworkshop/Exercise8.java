@@ -1,11 +1,8 @@
 package io.javabrains.reactiveworkshop;
 
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 import java.io.IOException;
-import java.util.concurrent.Flow;
-import java.util.function.Function;
 
 import static io.javabrains.reactiveworkshop.ReactiveSources.intNumbersFluxWithException;
 

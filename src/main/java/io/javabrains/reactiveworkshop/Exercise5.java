@@ -1,7 +1,6 @@
 package io.javabrains.reactiveworkshop;
 
 import org.reactivestreams.Subscription;
-import reactor.core.CoreSubscriber;
 import reactor.core.publisher.BaseSubscriber;
 
 import java.io.IOException;

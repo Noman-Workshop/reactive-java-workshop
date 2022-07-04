@@ -1,14 +1,9 @@
 package io.javabrains.reactiveworkshop;
 
-import reactor.core.publisher.Mono;
-
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
-import static io.javabrains.reactiveworkshop.ReactiveSources.*;
+import static io.javabrains.reactiveworkshop.ReactiveSources.intNumbersFlux;
+import static io.javabrains.reactiveworkshop.ReactiveSources.intNumbersFluxWithRepeat;
 
 public class Exercise7 {
 	
