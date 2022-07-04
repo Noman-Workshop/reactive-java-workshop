@@ -43,7 +43,7 @@ public class ReactiveSources {
         return Flux.just(
                 new User(1, "Lionel", "Messi"),
                 new User(2, "Cristiano", "Ronaldo"),
-                new User(2, "Diego", "Maradona"),
+                new User(3, "Diego", "Maradona"),
                 new User(4, "Zinedine", "Zidane"),
                 new User(5, "Jürgen", "Klinsmann"),
                 new User(6, "Gareth", "Bale")
