@@ -28,9 +28,12 @@ public class ReactiveSources {
         return Flux
                 .range(1, 10)
                 .delayElements(Duration.ofSeconds(1))
-                .map(e -> {
-                    if (e == 5) throw new RuntimeException("An error happened in the flux");
-                    return e;
+                .handle((e, sink) -> {
+                    if (e == 5) {
+                        sink.error(new RuntimeException("An error happened in the flux"));
+                        return;
+                    }
+                    sink.next(e);
                 });
     }
 

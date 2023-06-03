@@ -20,6 +20,8 @@ public class Exercise4 {
 		
 		System.out.println("Press a key to end");
 		System.in.read();
+		
+		// with mono we can only get 0 or 1 item
 	}
 	
 }

@@ -14,8 +14,16 @@ public class Exercise8 {
 		// Use ReactiveSources.intNumbersFluxWithException()
 		
 		// Print values from intNumbersFluxWithException and print a message when error happens
+		// here the error is propagated to the subscriber, and it stops the stream
+		// and the error does not propagate to the next subscriber
 		intNumbersFluxWithException()
 				.subscribe(System.out::println, error -> System.out.println("Error: " + error));
+		
+		// the doOnError operator allows us to do something when an error happens
+		// but does not stop the error from propagating
+//		intNumbersFluxWithException()
+//				.doOnError(error -> System.out.println("Error: " + error))
+//				.subscribe(System.out::println);
 		
 		// Print values from intNumbersFluxWithException and continue on errors
 		intNumbersFluxWithException()

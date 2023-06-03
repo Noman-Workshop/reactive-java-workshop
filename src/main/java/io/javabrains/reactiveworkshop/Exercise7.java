@@ -2,8 +2,7 @@ package io.javabrains.reactiveworkshop;
 
 import java.io.IOException;
 
-import static io.javabrains.reactiveworkshop.ReactiveSources.intNumbersFlux;
-import static io.javabrains.reactiveworkshop.ReactiveSources.intNumbersFluxWithRepeat;
+import static io.javabrains.reactiveworkshop.ReactiveSources.*;
 
 public class Exercise7 {
 	
@@ -33,7 +32,9 @@ public class Exercise7 {
 		                .subscribe(System.out::println);
 		
 		// Switch ints from intNumbersFlux to the right user from userFlux
-		// TODO: Write O(m+n) code without blocking the thread
+		// here we are using flatMap because we dont want to ger the flux but the result of the flux
+		intNumbersFlux().flatMap(i -> userFlux().filter(u -> u.getId() == i).take(1))
+		                .subscribe(System.out::println);
 		
 		// Print only distinct numbers from intNumbersFluxWithRepeat
 		intNumbersFluxWithRepeat().distinct()
